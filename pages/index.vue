@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        firebase-nuxt-actions2
+        firebase-nuxt-actions3
       </h1>
       <h2 class="subtitle">
         My superior Nuxt.js project
