@@ -8,8 +8,10 @@ jobs:
     container:
       image: node
     steps:
+      - run: pwd
+      - run: ls -la
       - run: yarn global add firebase-tools
       - run: yarn
-      - run: yarn generate
+      - run: pwd && ls && yarn generate
       - run: firebase use v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
       - run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
