@@ -8,10 +8,12 @@ jobs:
   build:
     name: ビルド🍕
     runs-on: ubuntu-latest
-    container:
-      image: node
     steps:
       - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: npm install -g yarn
       - run: yarn
       - run: yarn generate
       - run: yarn global add firebase-tools
@@ -21,8 +23,6 @@ jobs:
     name: デプロイ🐳
     needs: build
     runs-on: ubuntu-latest
-    container:
-      image: node
     steps:
       - run: pwd
       - run: ls -la
