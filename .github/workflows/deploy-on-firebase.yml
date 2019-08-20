@@ -8,11 +8,10 @@ jobs:
     container:
       image: node
     steps:
-      - uses: actions/checkout@master
-      - run: echo "Hello, ${GITHUB_SHA}"
+      - uses: actions/checkout
       - run: ls -la
-      - run: yarn global add firebase-tools
       - run: yarn
       - run: pwd && ls && yarn generate
+      - run: yarn global add firebase-tools
       - run: firebase use v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
       - run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
