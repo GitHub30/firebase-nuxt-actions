@@ -6,7 +6,7 @@
         firebase-nuxt-actions3
       </h1>
       <h2 class="subtitle">
-        My superior Nuxt.js project
+        Firebase Meetup in Osaka #5 / v-kansai Vue.js/Nuxt Meetup #9
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
