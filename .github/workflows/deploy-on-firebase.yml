@@ -1,9 +1,9 @@
-name: Firebaseにデプロイ
+name: Firebaseにデプロイ🔥
 on: push
 
 jobs:
   build:
-    name: ビルド
+    name: ビルド🍕
     runs-on: ubuntu-latest
     container:
       image: node
