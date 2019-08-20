@@ -17,3 +17,15 @@ jobs:
       - run: yarn global add firebase-tools
       - run: firebase use v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
       - run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+  deploy:
+    name: デプロイ🐳
+    needs: build
+    runs-on: ubuntu-latest
+    container:
+      image: node
+    steps:
+      - run: pwd
+      - run: ls -la
+      - uses: actions/checkout@master
+      - run: pwd
+      - run: ls -la
