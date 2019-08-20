@@ -8,9 +8,7 @@ jobs:
     container:
       image: node
     steps:
-      - env:
-          GITHUB_SHA: ${GITHUB_SHA}
-        uses: actions/checkout@${GITHUB_SHA}
+      - uses: actions/checkout@master
       - run: ls -la
       - run: yarn
       - run: pwd && ls && yarn generate
