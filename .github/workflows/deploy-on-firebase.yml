@@ -1,4 +1,4 @@
-name: Firebaseにデプロイ🔥
+name: 🔥Firebaseにデプロイ🔥
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: ビルド🍕
+    name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -16,13 +16,3 @@ jobs:
       - run: yarn generate
       - run: firebase use v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
       - run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
-  deploy:
-    name: デプロイ🐳
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: pwd
-      - run: ls -la
-      - uses: actions/checkout@master
-      - run: pwd
-      - run: ls -la
