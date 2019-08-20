@@ -2,7 +2,7 @@ name: 🔥Firebaseにデプロイ🔥
 on: push
 
 jobs:
-  build:
+  buildAndDeploy:
     name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
