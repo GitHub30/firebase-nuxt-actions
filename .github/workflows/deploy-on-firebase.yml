@@ -9,7 +9,6 @@ jobs:
       image: node
     steps:
       - uses: actions/checkout@master
-      - run: ls -la
       - run: yarn
       - run: yarn generate
       - run: yarn global add firebase-tools
