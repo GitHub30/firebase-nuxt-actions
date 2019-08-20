@@ -9,7 +9,7 @@ jobs:
       image: node
     steps:
       - uses: actions/checkout@master
-      - run: pwd
+      - run: echo "Hello, ${GITHUB_SHA}"
       - run: ls -la
       - run: yarn global add firebase-tools
       - run: yarn
