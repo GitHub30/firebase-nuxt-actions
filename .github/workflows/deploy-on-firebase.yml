@@ -8,7 +8,7 @@ jobs:
     container:
       image: node
     steps:
-      - uses: actions/checkout
+      - uses: actions/checkout@${GITHUB_SHA}
       - run: ls -la
       - run: yarn
       - run: pwd && ls && yarn generate
