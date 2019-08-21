@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        v-kansai x FJUG
+        v-kansai x FJUG🔥
       </h1>
       <h2 class="subtitle">
         Firebase Meetup in Osaka #5 / v-kansai Vue.js/Nuxt Meetup #9
