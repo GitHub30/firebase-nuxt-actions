@@ -6,16 +6,20 @@ jobs:
     name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
-      - run: echo fuga >  fuga.txt
       - run: sudo apt-get install -y tmate openssh-client
         env:
           DEBIAN_FRONTEND: noninteractive
       - run: echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
       - run: tmate -S /tmp/tmate.sock new-session -d
-      - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
       - run: tmate -S /tmp/tmate.sock wait tmate-ready
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
-      - run: echo hoge >  hoge.txt
       - run: sleep infinity & wait
+      - run: |
+          git clone https://github.com/stefanhaustein/TerminalImageViewer.git
+          cd TerminalImageViewer/src/main/cpp
+          make
+          sudo make install
+          wget https://avatars1.githubusercontent.com/u/9919
+          tiv 9919
       - run: echo Gracefully finishing
