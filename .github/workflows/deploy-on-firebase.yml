@@ -14,4 +14,4 @@ jobs:
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
       - run: echo hoge >  hoge.txt
-      - run: sleep infinity
+      - run: sleep infinity & wait
