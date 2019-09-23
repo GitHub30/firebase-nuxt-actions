@@ -15,5 +15,5 @@ jobs:
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
       - run: sleep infinity & wait
-      - run: curl https://gist.githubusercontent.com/GitHub30/3630cfa8ee9546ef3c515c159f605abb/raw/10664ee60fe51eba2111839e225e0095659f91f3/GitHubActionsMeetupOsaka.txt
+      - run: curl -s https://gist.githubusercontent.com/GitHub30/3630cfa8ee9546ef3c515c159f605abb/raw/10664ee60fe51eba2111839e225e0095659f91f3/GitHubActionsMeetupOsaka.txt
       - run: echo Gracefully finishing
