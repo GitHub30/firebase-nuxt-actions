@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo OK
-      - run: uses: GitHub30/action-tmate@master
+      - uses: GitHub30/action-tmate@master
       - run: sudo apt-get install -y sl
       - run: ls -la /usr/games/sl
       - run: TERM=xterm /usr/games/sl
