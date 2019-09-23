@@ -6,15 +6,9 @@ jobs:
     name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
-      - name: Debuggging with tmate
-        uses: GitHub30/action-tmate@master2
-      - run: sudo apt-get install -y sl
-      - run: ls -la /usr/games/sl
-      - run: TERM=xterm /usr/games/sl
-      - run: sudo find / -name sl
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-      - run: npm install -g yarn firebase-tools
-      - run: yarn
-      - run: yarn generate
-      - run: firebase deploy --project v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
+      - run: sudo apt-get install -y tmate openssh-client
+      - run: echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
+      - run: tmate -S /tmp/tmate.sock new-session -d
+      - run: tmate -S /tmp/tmate.sock wait tmate-ready
+      - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+      - run: tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
