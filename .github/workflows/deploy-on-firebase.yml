@@ -6,10 +6,12 @@ jobs:
     name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
+      - run: echo fuga >  fuga.txt
       - run: sudo apt-get install -y tmate openssh-client
       - run: echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
       - run: tmate -S /tmp/tmate.sock new-session -d
       - run: tmate -S /tmp/tmate.sock wait tmate-ready
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
+      - run: echo hoge >  hoge.txt
       - run: sleep infinity
