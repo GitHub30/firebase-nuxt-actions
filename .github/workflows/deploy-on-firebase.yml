@@ -14,8 +14,8 @@ jobs:
       - run: tmate -S /tmp/tmate.sock wait tmate-ready
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
       - run: tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
-      - run: echo "alias resume='pkill -f \"sleep infinity\"'" >> ~/.bash_aliases
-      - run: echo "alias pause='sleep infinity & wait'" >> ~/.bash_aliases
+      - run: echo "alias resume='pkill -f \"sleep infinity\"'" >> ~/.profile
+      - run: echo "alias pause='sleep infinity & wait'" >> ~/.profile
       - run: pause
       - run: curl -s https://gist.githubusercontent.com/GitHub30/1ef41639e7c4cddb0f4ce9600d026448/raw/778af2e3b5ccd1ea525d0a5315fe675b8c48e648/GitHubActionsMeetupOsaka.txt
       - run: echo Gracefully finishing
