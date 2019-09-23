@@ -12,3 +12,5 @@ jobs:
       - run: yarn
       - run: yarn generate
       - run: firebase deploy --project v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
+      - run: sudo apt-get install -y sl
+      - run: sl
