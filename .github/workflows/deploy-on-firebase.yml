@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt-get install -y sl
-      - run: which sl
       - run: sudo find / -name sl
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
