@@ -9,8 +9,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
       - run: npm install -g yarn firebase-tools
+      - run: sudo apt-get install -y sl && which sl && sl && $(which sl)
       - run: yarn
       - run: yarn generate
       - run: firebase deploy --project v-kansai --token ${{ secrets.FIREBASE_TOKEN }}
-      - run: sudo apt-get install -y sl
-      - run: sl
