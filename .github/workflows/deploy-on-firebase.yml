@@ -6,7 +6,7 @@ jobs:
     name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
-      - run: sudo DEBIAN_FRONTEND=noninteractive apt-get install -y tmate
+      - run: sudo DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y tmate
       - run: echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
       - run: tmate -S /tmp/tmate.sock new-session -d
       - run: tmate -S /tmp/tmate.sock wait tmate-ready
