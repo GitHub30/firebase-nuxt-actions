@@ -3,7 +3,7 @@ on: push
 
 jobs:
   buildAndDeploy:
-    name: ビルド&デプロイ🐳🐳
+    name: ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt-get install -y tmate openssh-client
