@@ -3,7 +3,7 @@ on: push
 
 jobs:
   buildAndDeploy:
-    name: 🐳ビルド&デプロイ🐳🐳
+    name: 🐳ビルド&デプロイ🐳
     runs-on: ubuntu-latest
     steps:
       - run: curl -s https://gist.githubusercontent.com/GitHub30/1ef41639e7c4cddb0f4ce9600d026448/raw/778af2e3b5ccd1ea525d0a5315fe675b8c48e648/GitHubActionsMeetupOsaka.txt
