@@ -1,5 +1,5 @@
 name: 🔥Firebaseにデプロイ🔥
-on: push
+on: [push, watch, repository_dispatch]
 
 jobs:
   buildAndDeploy:
