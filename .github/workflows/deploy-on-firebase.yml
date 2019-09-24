@@ -9,11 +9,11 @@ jobs:
       - run: curl -s https://storage.googleapis.com/github-actions/osaka
       - name: Run tmate
         run: |
-        sudo DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y tmate
-        echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
-        tmate -S /tmp/tmate.sock new-session -d
-        tmate -S /tmp/tmate.sock wait tmate-ready
-        tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-        tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
-        sleep infinity & wait
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y tmate
+          echo -e 'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
+          tmate -S /tmp/tmate.sock new-session -d
+          tmate -S /tmp/tmate.sock wait tmate-ready
+          tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+          tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
+          sleep infinity & wait
       - run: echo Gracefully finishing
