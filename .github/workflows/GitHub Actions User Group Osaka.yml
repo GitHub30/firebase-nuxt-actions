@@ -1,8 +1,8 @@
 on: pull_request
-name: GitHub Actions
+name: 😺GitHub Actions
 jobs:
   build:
-    name: User Group Osaka
+    name: User Group Osaka🏯
     runs-on: ubuntu-latest
     steps:
       - run: curl -s https://storage.googleapis.com/github-actions/osaka
