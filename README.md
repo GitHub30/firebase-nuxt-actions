@@ -1,4 +1,5 @@
 # firebase-nuxt-actions
+![](https://github.com/GitHub30/firebase-nuxt-actions/workflows/🔥Firebaseにデプロイ🔥/badge.svg)
 
 > My superior Nuxt.js project
 
