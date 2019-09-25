@@ -15,5 +15,5 @@ jobs:
           tmate -S /tmp/tmate.sock wait tmate-ready
           tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
           tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
-          sleep infinity & wait
+      - run: sleep infinity & wait
       - run: echo Gracefully finishing
